@@ -6,6 +6,8 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("hello");
-        Flowable.just("Hello world").subscribe(System.out::println);
+        String[] aa = {"hello", "hello2", "hello3"};
+        Observable<String> stringObservable = Observable.fromArray(aa);
+        stringObservable.subscribe(System.out::println);
     }
 }
